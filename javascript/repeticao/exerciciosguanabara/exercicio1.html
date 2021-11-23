@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de remuneração</title>
+</head>
+<body>
+    <h1>controle de remuneração dos funcionários</h1>
+    <button onclick="remuneraçao()">controlar remuneração</button>
+    <p id="total"> o resultado vai aparecer aqui...</p>
+
+
+
+    <script>
+        function remuneração (){
+      let name = window.prompt("Qual seu nome caro funcionário?") 
+      let n1 = Number(window.prompt("quanto você ganha?"))
+      let n2 = Number(window.prompt("qual vai ser "))
+      let valor = (n1 + n2) / 100
+      let total = (valor + n1)
+
+      let saida = document.getElementById("total")
+      saida.innerHTML= `você <strong> ${name} </strong> ganhava <strong> R$${n1}</strong> por mês. Agora com o reajuste de <strong> ${n2}%</strong>, você passará a ganhar <strong> R$${valor}</strong> a mais do que você recebia e vai ter um novo salário de <strong> R$${total}</strong>.`
+    
+    
+}     
+</script>
+</body>
+</html>
