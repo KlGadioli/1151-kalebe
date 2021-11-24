@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro dos empregados</title>
+    
+</head>
+<body>
+    <main>
+        <section>
+<h1>Cadastre seus empregados!</h1>
+ <form action="salvar.php" method="get" onsubmit="return Cadastro()">
+ <label for="empregados" >Quantos empregados serão cadastrados? </label>
+<input type="number" id="empregados" min="1"> 
+<input type="submit" id="but" value="CALCULE">
+     </form>
+<p id="resolução">Resultado aqui...</p>   
+</section>
+</main>
+<script>
+let resolução = document.getElementById("resolução")
+function Cadastro() {
+    let empregados = Number(document.getElementById("empregados").value)
+    let number = 1
+    let s = 0
+    let media = 0
+    let inferior = 0
+    let superior = 0 
+    let sal = 0
+    while (number <= empregados) {
+        sal = Number(prompt("Quanto é o salário dos empregados?"))
+        s += sal
+        media = s / empregados
+if (number == 1) {
+            superior = sal
+            superior = sal
+        }else {
+            if (sal >superior) {
+                superior = sal
+            }
+            else if (sal < inferior) {
+                inferior = sal
+            }
+        }
+        number++
+    }resolução.innerHTML = `O valor dos empregados cadastrados foi de: ${empregados} empregados. A empresa vai precisar de ${s} reais para o pagamento desses ${empregados} empregados. A maior Remuneração foi ${superior} reais. A menor Remuneração foi  ${inferior} reais.A média de todas as Remunerações dos ${empregados} foi de ${media}.`
+    return false }
+
+    </script>          
+    
+</body>
+</html>
