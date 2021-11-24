@@ -8,21 +8,20 @@
 </head>
 <body>
     <h1>controle de remuneração dos funcionários</h1>
-    <button onclick="remuneraçao()">controlar remuneração</button>
-    <p id="total"> o resultado vai aparecer aqui...</p>
+    <button onclick="remuneraçao()">controlar remuneraçao</button>
+    <p id="total"> o resultado vai aparecer aqui</p>
 
 
+  <script>
+        function remuneraçao() {
+      let nome = window.prompt("Qual seu nome caro funcionário?") 
+      let numero1 = Number (window.prompt("quanto você ganha?"))
+      let numero2 = Number (window.prompt("qual vai ser a porcentagem do reajuste do seu salário?"))
+      let resolucao = (numero1 + numero2) / 100
+      let final = (valor + numero1)
 
-    <script>
-        function remuneração (){
-      let name = window.prompt("Qual seu nome caro funcionário?") 
-      let n1 = Number(window.prompt("quanto você ganha?"))
-      let n2 = Number(window.prompt("qual vai ser "))
-      let valor = (n1 + n2) / 100
-      let total = (valor + n1)
-
-      let saida = document.getElementById("total")
-      saida.innerHTML= `você <strong> ${name} </strong> ganhava <strong> R$${n1}</strong> por mês. Agora com o reajuste de <strong> ${n2}%</strong>, você passará a ganhar <strong> R$${valor}</strong> a mais do que você recebia e vai ter um novo salário de <strong> R$${total}</strong>.`
+      let saida = document.getElementById("final")
+      saida.innerHTML = `você <strong> ${nome} </strong> ganhava <strong> R$ ${numero1} </strong> por mês. Agora com o reajuste de <strong> ${numero2}% </strong>, você passará a ganhar <strong> R$ ${resolucao} </strong> a mais do que você recebia e vai ter um novo salário de <strong> R$ ${final} </strong>!`
     
     
 }     
