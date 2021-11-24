@@ -9,11 +9,11 @@
 <body>
     <h1>controle de remuneração dos funcionários</h1>
     <button onclick="remuneraçao()">controlar remuneraçao</button>
-    <p id="total"> o resultado vai aparecer aqui</p>
+    <p id="final"> o resultado vai aparecer aqui</p>
 
 
   <script>
-        function remuneraçao() {
+        function remuneraçao(){
       let nome = window.prompt("Qual seu nome caro funcionário?") 
       let numero1 = Number (window.prompt("quanto você ganha?"))
       let numero2 = Number (window.prompt("qual vai ser a porcentagem do reajuste do seu salário?"))
@@ -21,7 +21,7 @@
       let final = (valor + numero1)
 
       let saida = document.getElementById("final")
-      saida.innerHTML = `você <strong> ${nome} </strong> ganhava <strong> R$ ${numero1} </strong> por mês. Agora com o reajuste de <strong> ${numero2}% </strong>, você passará a ganhar <strong> R$ ${resolucao} </strong> a mais do que você recebia e vai ter um novo salário de <strong> R$ ${final} </strong>!`
+      saida.innerHTML = `você <strong> ${nome} </strong> ganhava <strong> R$ ${numero1} </strong> por mês. Agora com o reajuste de <strong> ${numero2} </strong>, você passará a ganhar <strong> R$ ${resolucao} </strong> a mais do que você recebia e vai ter um novo salário de <strong> R$ ${final} </strong>!`
     
     
 }     
